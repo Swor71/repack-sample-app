@@ -33,7 +33,7 @@ export function HomeScreen() {
           const isInstalled = installedApps[app.id];
 
           return (
-            <View>
+            <View key={app.id}>
               <Pressable
                 onPress={() => !isInstalled && install(app.id)}
                 onLongPress={() => isInstalled && uninstall(app.id)}
